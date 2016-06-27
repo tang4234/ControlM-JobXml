@@ -1,0 +1,26 @@
+/target
+/*/target
+*/target/*
+demand-charts/target/*
+logs/**
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# IntelliJ IDEA
+.idea/*
+WebOffice.iml
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+.DS_Store
+*.iml
+src/main/resources/application.properties
+*.txt
