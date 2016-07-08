@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76510280-e790-4728-916f-61b1402f3ba5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_oracle_ojdbc14_g_10_2_0_5.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ControlM-JobXml.iml" afterPath="$PROJECT_DIR$/ControlM-JobXml.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/job_init.properties" afterPath="$PROJECT_DIR$/src/main/resources/job_init.properties" />
     </list>
     <ignored path="jobxml.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,16 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xiruan/controlm/App.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,11 +85,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="job_init.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="job_init.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/job_init.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="325">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -158,6 +155,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/xiruan/controlm/XmlConverUtil.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/job_init.properties" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -280,6 +279,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ControlM-JobXml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ControlM-JobXml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -753,12 +766,12 @@
       <workItem from="1466924735410" duration="8576000" />
       <workItem from="1466992184165" duration="16222000" />
       <workItem from="1467018726274" duration="375000" />
-      <workItem from="1467944893211" duration="536000" />
+      <workItem from="1467944893211" duration="1568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25709000" />
+    <option name="totallyTimeSpent" value="26741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="0" />
@@ -1057,8 +1070,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/job_init.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="325">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding />
         </state>
       </provider>
