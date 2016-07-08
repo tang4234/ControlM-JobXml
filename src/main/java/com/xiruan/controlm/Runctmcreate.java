@@ -35,20 +35,20 @@ public class Runctmcreate {
           }
           //将sql查询出来的数据作为属性插入
           for (String key : data.keySet()) {
-            if (data.get(key) != null && !key.equals("INCOND") && !key.equals("OUTCOND")) {
-              //job.addAttribute(key, data.get(key).toString());
-              if (key.equals("CMDLINE")) {
-                job += " -" + key + " \"" + data.get(key) + "\"";
-              } else {
-                job += " -" + key + " " + data.get(key);
-              }
+            if (data.get(key) != null && !key.equals(PropertiesInit.aft_job_field) && !key.equals(PropertiesInit.pre_job_field)) {
+              job += " -" + key + " \"" + data.get(key) + "\"";
+//              if (key.equals("CMDLINE")) {
+//                job += " -" + key + " \"" + data.get(key) + "\"";
+//              } else {
+//                job += " -" + key + " " + data.get(key);
+//              }
             } else {
               //job.addAttribute(key, "");
             }
           }
           String jobName = "";
           //if(data.get(PropertiesInit.job_field)!=null){
-          jobName = data.get(PropertiesInit.job_field).toString();
+          jobName = data.get(PropertiesInit.job_field)+"";
           // }
           for (Map<String, Object> processData : list) {
             //添加OUT
@@ -101,6 +101,7 @@ public class Runctmcreate {
   public static void startcmd(String cmd) {
 
     cmd = "ctmcreate" + cmd;
+    System.out.println(" --------command:["+cmd+"]");
     String[] command = {"/bin/csh", "-c", cmd};
     System.out.println(cmd);
     try {
@@ -125,7 +126,7 @@ public class Runctmcreate {
 
     } catch (Throwable e) {
       //log.error("call shell failed. " + startcmd(job););
-      System.out.println("Run Command Failed:" + e.toString());
+      System.out.println("Run Command Failed:" + e.getMessage());
     }
     System.out.println("---------------------------------------------------------------------------------------------");
     try {
