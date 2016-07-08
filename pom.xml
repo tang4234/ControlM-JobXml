@@ -10,11 +10,11 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>com.oracle</groupId>-->
-            <!--<artifactId>ojdbc14_g</artifactId>-->
-            <!--<version>10.2.0.5</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc14_g</artifactId>
+            <version>10.2.0.5</version>
+        </dependency>
         <dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -97,7 +97,7 @@
                     <version>2.1</version>
                     <configuration>
                         <attach>true</attach>
-                        <encoding>UTF-8</encoding>
+                        <!--<encoding>UTF-8</encoding>-->
                     </configuration>
                     <executions>
                         <execution>
@@ -114,7 +114,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>com.xiruan.controlm.App</mainClass>
+                                <mainClass>com.xiruan.controlm.MainApp</mainClass>
                             </manifest>
                         </archive>
                         <descriptorRefs>

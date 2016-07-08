@@ -22,6 +22,7 @@ public class PropertiesInit {
   public static String job_field;
   public static String pre_job_field;
   public static String aft_job_field;
+  public static int sleeptime;
 
   public static final  String jobParentKey="JOB.";
   public static Map<String, String> jobMap = new HashMap<String, String>();
@@ -51,6 +52,7 @@ public class PropertiesInit {
     job_field = resourceBundle.getString("job_field");
     pre_job_field = resourceBundle.getString("pre_job_field");
     aft_job_field = resourceBundle.getString("aft_job_field");
+    sleeptime = Integer.parseInt(resourceBundle.getString("sleeptime"));
 
 
 

@@ -4,23 +4,12 @@ package com.xiruan.controlm;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Time;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
-
-import oracle.jdbc.OracleTypes;
 
 
 public class DBUtil {
@@ -352,7 +341,7 @@ public class DBUtil {
     } else if ("java.lang.Date".equals(n)) {
       f.set(t, new Date(((java.sql.Date) value).getTime()));
     } else if ("java.lang.Timer".equals(n)) {
-      f.set(t, new Time(((java.sql.Time) value).getTime()));
+      f.set(t, new Time(((Time) value).getTime()));
     } else if ("java.sql.Timestamp".equals(n)) {
       f.set(t, (java.sql.Timestamp) value);
     } else {
@@ -379,7 +368,7 @@ public class DBUtil {
     CallableStatement proc = null;
     try {
       proc = con.prepareCall(procedureName);
-      proc.registerOutParameter(1, OracleTypes.VARCHAR);
+      proc.registerOutParameter(1, Types.VARCHAR);
       for (int i = 0; i < params.length; i++) {
         proc.setObject(i + 2, params[i]);
       }
@@ -392,43 +381,7 @@ public class DBUtil {
     }
   }
 
-  public static <T> List<T> executeProcedureReturnCursor(Connection con, String procedureName, Class<T> beanClass,
-                                                         Object... params) throws SQLException, InstantiationException, IllegalAccessException {
-    List<T> lists = new ArrayList<T>();
-    CallableStatement proc = null;
-    ResultSet rs = null;
-    try {
-      proc = con.prepareCall(procedureName);
-      proc.registerOutParameter(1, OracleTypes.CURSOR);
-      for (int i = 0; i < params.length; i++) {
-        proc.setObject(i + 2, params[i]);
-      }
-      boolean b = proc.execute();
-      if (b) {
-        rs = (ResultSet) proc.getObject(1);
-        while (null != rs && rs.next()) {
-          T t = beanClass.newInstance();
-          Field[] fields = beanClass.getDeclaredFields();
-          for (Field f : fields) {
-            f.setAccessible(true);
-            String name = f.getName();
-            try {
-              Object value = rs.getObject(name);
-              setValue(t, f, value);
-            } catch (Exception e) {
-            }
-          }
-          lists.add(t);
-        }
-      }
-    } finally {
-      if (null != rs)
-        rs.close();
-      if (null != proc)
-        proc.close();
-    }
-    return lists;
-  }
+
 
   public static <T> List<List<T>> listLimit(List<T> lists, int pageSize) {
     List<List<T>> llists = new ArrayList<List<T>>();
